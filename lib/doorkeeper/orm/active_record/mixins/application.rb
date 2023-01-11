@@ -4,7 +4,7 @@ module Doorkeeper::Orm::ActiveRecord::Mixins
   module Application
     extend ActiveSupport::Concern
 
-    included do # rubocop:disable Metrics/BlockLength
+    included do
       self.table_name = compute_doorkeeper_table_name
       self.strict_loading_by_default = false if respond_to?(:strict_loading_by_default)
 
